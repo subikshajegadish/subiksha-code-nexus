@@ -35,11 +35,9 @@ const Hero = () => {
                 Contact Me
               </Button>
               <Button variant="outline" className="neon-border hover-glow">
-                <Download className="mr-2 h-4 w-4" />
-                Resume
-              </Button>
-              <Button variant="outline" className="neon-border hover-glow">
-                View Portfolio
+                <a href="#portfolio" className="flex items-center">
+                  View Portfolio
+                </a>
               </Button>
             </div>
 
@@ -98,10 +96,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="text-neon-cyan" size={24} />
-        </div>
       </div>
     </section>
   );

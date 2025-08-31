@@ -19,7 +19,6 @@ const Header = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -49,9 +48,6 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            <Button variant="outline" className="neon-border hover-glow">
-              Resume
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -76,11 +72,6 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <div className="px-4 pt-2">
-              <Button variant="outline" className="w-full neon-border">
-                Resume
-              </Button>
-            </div>
           </div>
         )}
       </nav>

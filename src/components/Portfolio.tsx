@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { ExternalLink, Github, Zap, Image, Database } from 'lucide-react';
 
 const Portfolio = () => {
@@ -52,90 +53,83 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-1 gap-12">
-          {projects.map((project, index) => (
-            <Card 
-              key={index}
-              className="bg-gradient-card border-border hover-glow transition-all duration-300 animate-fade-in-up overflow-hidden"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <CardContent className="p-0">
-                <div className="grid lg:grid-cols-2 gap-0">
-                  {/* Project Image */}
-                  <div className="relative h-64 lg:h-auto bg-gradient-secondary">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center space-y-4">
-                        {project.icon}
-                        <p className="text-sm text-muted-foreground">{project.category}</p>
+        <div className="max-w-4xl mx-auto">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {projects.map((project, index) => (
+                <CarouselItem key={index}>
+                  <Card className="bg-gradient-card border-border hover-glow transition-all duration-300 overflow-hidden">
+                    <CardContent className="p-6">
+                      <div className="space-y-6">
+                        {/* Project Header */}
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-3">
+                            {project.icon}
+                            <span className={`text-${project.color} text-sm font-medium bg-secondary px-3 py-1 rounded-full`}>
+                              {project.category}
+                            </span>
+                          </div>
+                        </div>
+                        
+                        <h3 className="text-xl font-bold text-foreground">
+                          {project.title}
+                        </h3>
+                        
+                        <p className="text-muted-foreground leading-relaxed text-sm">
+                          {project.description}
+                        </p>
+
+                        {/* Tech Stack */}
+                        <div className="space-y-2">
+                          <h4 className="font-medium text-foreground text-sm">Technologies:</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {project.techStack.map((tech, techIndex) => (
+                              <span 
+                                key={techIndex}
+                                className="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-xs"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Features */}
+                        <div className="space-y-2">
+                          <h4 className="font-medium text-foreground text-sm">Key Features:</h4>
+                          <ul className="space-y-1">
+                            {project.features.map((feature, featureIndex) => (
+                              <li 
+                                key={featureIndex}
+                                className="flex items-start space-x-2 text-muted-foreground"
+                              >
+                                <div className={`w-1.5 h-1.5 bg-${project.color} rounded-full mt-1.5 flex-shrink-0`}></div>
+                                <span className="leading-relaxed text-xs">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Action Buttons */}
+                        <div className="flex space-x-3 pt-2">
+                          <Button variant="outline" size="sm" className="neon-border hover-glow">
+                            <Github className="mr-1 h-3 w-3" />
+                            View Code
+                          </Button>
+                          <Button variant="outline" size="sm" className="neon-border hover-glow">
+                            <ExternalLink className="mr-1 h-3 w-3" />
+                            Live Demo
+                          </Button>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Project Details */}
-                  <div className="p-8 space-y-6">
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <span className={`text-${project.color} text-sm font-medium bg-secondary px-3 py-1 rounded-full`}>
-                          {project.category}
-                        </span>
-                      </div>
-                      
-                      <h3 className="text-2xl font-bold text-foreground">
-                        {project.title}
-                      </h3>
-                      
-                      <p className="text-muted-foreground leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    {/* Tech Stack */}
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-foreground">Technologies Used:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.techStack.map((tech, techIndex) => (
-                          <span 
-                            key={techIndex}
-                            className="px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-sm"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Features */}
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-foreground">Key Features:</h4>
-                      <ul className="space-y-2">
-                        {project.features.map((feature, featureIndex) => (
-                          <li 
-                            key={featureIndex}
-                            className="flex items-start space-x-3 text-muted-foreground"
-                          >
-                            <div className={`w-2 h-2 bg-${project.color} rounded-full mt-2 flex-shrink-0`}></div>
-                            <span className="leading-relaxed text-sm">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="flex space-x-4 pt-4">
-                      <Button variant="outline" className="neon-border hover-glow">
-                        <Github className="mr-2 h-4 w-4" />
-                        View Code
-                      </Button>
-                      <Button variant="outline" className="neon-border hover-glow">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
     </section>
