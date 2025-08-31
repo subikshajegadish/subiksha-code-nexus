@@ -14,7 +14,7 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-2">
-              <p className="text-neon-cyan text-lg">Hello there, nice to meet you ❤️, I am</p>
+              <p className="text-neon-cyan text-lg">Hello there, I am</p>
               <h1 className="text-5xl md:text-7xl font-bold">
                 <span className="gradient-text">Subiksha</span>
               </h1>
@@ -86,15 +86,12 @@ const Hero = () => {
 
               {/* Profile Image Container */}
               <div className="relative w-80 h-80 md:w-96 md:h-96">
-                <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 blur-xl"></div>
-                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-transparent bg-gradient-primary p-1">
-                  <div className="w-full h-full rounded-full overflow-hidden bg-background">
-                    <img
-                      src="https://i.postimg.cc/ydcxSvzw/IMG-7979-2.avif"
-                      alt="Subiksha Jegadish"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="relative w-full h-full rounded-full overflow-hidden">
+                  <img
+                    src="https://i.postimg.cc/ydcxSvzw/IMG-7979-2.avif"
+                    alt="Subiksha Jegadish"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>

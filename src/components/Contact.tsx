@@ -94,7 +94,7 @@ const Contact = () => {
                   <div>
                     <p className="font-semibold text-foreground">Location</p>
                     <p className="text-muted-foreground">
-                      College Park, Maryland, USA
+                      United States of America
                     </p>
                   </div>
                 </div>

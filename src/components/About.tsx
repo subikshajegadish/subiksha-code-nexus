@@ -19,24 +19,29 @@ const About = () => {
 
   const skills = [
     {
-      category: "Full-Stack Development",
-      items: ["React", "Node.js", "Django", "ExpressJS", "Responsive UI"],
+      category: "Languages",
+      items: ["Python", "Java", "C/C++", "JavaScript", "HTML/CSS", "R", "SQL"],
       icon: <Code className="w-6 h-6 text-neon-purple" />
     },
     {
-      category: "System Optimization",
-      items: ["Python Scripting", "Database Management", "Process Automation"],
+      category: "Databases",
+      items: ["PostgreSQL", "MongoDB", "MySQL"],
       icon: <Zap className="w-6 h-6 text-neon-cyan" />
     },
     {
-      category: "Machine Learning & Computer Vision",
-      items: ["OpenCV", "NumPy", "Scikit-learn", "TensorFlow"],
+      category: "Frameworks and Libraries",
+      items: ["React", "Node.js", "Django", "ExpressJS", "Bootstrap", "Pandas", "NumPy", "Matplotlib", "OpenCV", "Scikit-learn"],
       icon: <Award className="w-6 h-6 text-neon-pink" />
     },
     {
-      category: "Cloud & Tools",
-      items: ["AWS", "Git", "JIRA", "Docker", "RESTful APIs"],
+      category: "Tools and Platforms",
+      items: ["Git", "JIRA", "Microsoft Azure", "VS Code", "Visual Studio", "PyCharm", "IntelliJ", "Eclipse"],
       icon: <Code className="w-6 h-6 text-tech-blue" />
+    },
+    {
+      category: "Operating Systems",
+      items: ["Windows", "Linux (Ubuntu)"],
+      icon: <Zap className="w-6 h-6 text-neon-cyan" />
     }
   ];
 

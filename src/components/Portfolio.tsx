@@ -34,21 +34,6 @@ const Portfolio = () => {
       color: "neon-cyan",
       category: "Computer Vision"
     },
-    {
-      title: "Database Automation System",
-      description: "Python automation scripts that revolutionized database restoration processes at ION Group.",
-      image: "/lovable-uploads/automation-project.jpg", // Placeholder
-      techStack: ["Python", "SQL", "Shell Scripting", "Cron Jobs", "PostgreSQL"],
-      features: [
-        "Reduced manual work from days to hours",
-        "Automated backup and restoration processes",
-        "Error handling and logging mechanisms",
-        "Improved operational efficiency by 85%"
-      ],
-      icon: <Zap className="w-6 h-6 text-neon-pink" />,
-      color: "neon-pink",
-      category: "System Automation"
-    }
   ];
 
   return (

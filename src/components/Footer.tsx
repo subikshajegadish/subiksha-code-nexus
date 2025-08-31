@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className="py-12 border-t border-border bg-gradient-hero">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+        <div className="flex flex-col items-center justify-center space-y-6">
           {/* Copyright */}
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <p className="text-muted-foreground">
               © 2024 Subiksha Jegadish. Made with{' '}
               <Heart className="inline w-4 h-4 text-neon-pink" />{' '}
